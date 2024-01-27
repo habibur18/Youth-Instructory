@@ -8,6 +8,9 @@ export default function Navbar() {
   const [isMobileSearchClick, setIsMobileSearchClick] = useState(false);
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const ref = useRef(null);
+  const [scrollingUp, setScrollingUp] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const isReloading = useRef(false);
 
   // function to update isMobile state based on screen width
 
@@ -45,9 +48,39 @@ export default function Navbar() {
     };
   }, []);
 
+  // Function to handle scroll
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    setScrollingUp(isReloading.current || prevScrollPos > currentScrollPos);
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  // Add event listener for scroll
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos, handleScroll]);
+
+  // Use the beforeunload event to detect page reload
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      isReloading.current = true;
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
   // toggle side bar
   return (
-    <nav className="bg-[#000000]">
+    <nav className={`bg-[#000000] ease-in-out duration-500 transition-all ${scrollingUp ? "top-0" : "-top-32"} fixed w-full z-10`}>
       {isMobileSearchClick ? (
         <div ref={ref} className="w-full">
           <div className="relative" ref={ref}>

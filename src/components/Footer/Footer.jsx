@@ -87,7 +87,7 @@ export default function Footer() {
       {/* Last section */}
       <div style={{ backgroundColor: "hsla(0,0%,91%,.5)" }} className="mt-16 text-[#b0b0b0] py-10">
         <div className="max-w-[1200px] mx-auto px-7 xl:px-0">
-          <div className="flex flex-wrap gap-16">
+          <div className="flex lg:gap-12 justify-between flex-wrap lg:flex-nowrap">
             {Object.entries(data).map(([key, value]) => (
               <div key={key}>
                 <h4 className="text-xl font-medium uppercase mb-3">{key}</h4>

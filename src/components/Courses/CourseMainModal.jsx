@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-export default function ModalDetailsPopup({ selectedCourse, closeModal }) {
-  console.log();
+export default function CourseMainModal({ selectedCourse, closeModal }) {
+  // console.log(selectedCourse);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640 ? true : false);
   const { name, author, shortDetails, sellerLevel, details, price, discount, courseDetails } = selectedCourse;
   const { courseImage, courseVideo } = courseDetails;
