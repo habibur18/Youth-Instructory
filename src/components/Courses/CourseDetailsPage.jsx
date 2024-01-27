@@ -553,8 +553,15 @@ export default function CourseDetailsPage() {
           <div className="group text-center mt-20 bg-[#f02d00] hover:bg-red-700 duration-300 font-bold border border-[#f02d00] text-white px-5 py-3 w-[22rem] mx-auto rounded-lg cursor-pointer">
             <Link
               to="/courses"
+              // onClick={() => {
+              //   window.scroll(0, 0);
+              // }}
               onClick={() => {
-                window.scroll(0, 0);
+                window.scroll({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                });
               }}
             >
               <button className="relative">
@@ -564,7 +571,7 @@ export default function CourseDetailsPage() {
             </Link>
           </div>
         </div>
-        {/* Courses you might like end */}
+        {/* Courses you might like ends */}
       </div>
       <div></div>
       {showModal && (
