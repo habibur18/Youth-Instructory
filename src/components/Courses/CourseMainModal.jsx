@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function CourseMainModal({ selectedCourse, closeModal }) {
   // console.log(selectedCourse);
@@ -42,9 +43,9 @@ export default function CourseMainModal({ selectedCourse, closeModal }) {
             <div>
               <p className={`${isMobile ? "text-sm" : "text-lg"} bg-yellow-500 w-24 px-1 rounded-sm`}>{sellerLevel}</p>
               <div className="space-y-2">
-                <a href="#" className={`cursor-pointer ${isMobile ? "font-medium" : "text-2xl"} font-semibold`}>
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className={`cursor-pointer ${isMobile ? "font-medium" : "text-2xl"} font-semibold`}>
                   {name}
-                </a>
+                </Link>
                 <p className="text-sm font-medium text-[#848484]">A course by By {author}</p>
                 {!isMobile ? (
                   <>
@@ -54,9 +55,9 @@ export default function CourseMainModal({ selectedCourse, closeModal }) {
                     </div>
                   </>
                 ) : null}
-                <a href="#" className="font-bold group hover:text-[#f02c00]">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="font-bold group hover:text-[#f02c00]">
                   <span>Learn more</span> <i className="fa-solid fa-arrow-right transform translate-x-0 group-hover:translate-x-2 duration-300"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

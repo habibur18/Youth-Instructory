@@ -128,9 +128,9 @@ export default function CourseDetailsPage() {
                                 </div>
                               </div>
                               <button className=" w-full border-4 border-[#00b2bd] text-[#00b2bd] px-4 py-2 rounded-lg mt-7">Buy course as a gift</button>
-                              <a className="hover:text-[#f02d00] underline underline-offset-4 flex  justify-center mt-3" href="#">
+                              <Link onClick={() => window.scrollTo(0, 0)} className="hover:text-[#f02d00] underline underline-offset-4 flex  justify-center mt-3" href="#">
                                 Redeem the course with a gift code
-                              </a>
+                              </Link>
                             </div>
                           )}
                           {!isMediumScreen && (
@@ -422,9 +422,9 @@ export default function CourseDetailsPage() {
                     </span>
                   </p>
                   <p className="my-3">Get a Domestika Plus subscription for $9.99 USD/month. Start this course now and watch 1000+ other courses for free!</p>
-                  <a className=" hover:text-[#f02d00] duration-300" href="#">
+                  <Link onClick={() => window.scrollTo(0, 0)} className=" hover:text-[#f02d00] duration-300" href="#">
                     Learn more
-                  </a>
+                  </Link>
                   <button
                     className="mt-3 border-2 border-[#f02d00] block bg-gradient-to-r from-[#ff4e10] via-[#ff1b17] to-[#f101e5] text-white px-4 py-2 rounded-lg w-full"
                     style={{
@@ -501,9 +501,9 @@ export default function CourseDetailsPage() {
                     </div>
                   </div>
                   <button className=" w-full border-4 border-[#00b2bd] text-[#00b2bd] px-4 py-2 rounded-lg mt-7">Buy course as a gift</button>
-                  <a className="hover:text-[#f02d00] underline underline-offset-4 flex  justify-center mt-3" href="#">
+                  <Link onClick={() => window.scrollTo(0, 0)} className="hover:text-[#f02d00] underline underline-offset-4 flex  justify-center mt-3" href="#">
                     Redeem the course with a gift code
-                  </a>
+                  </Link>
                 </div>
                 {/* buy course as a gift end */}
                 <hr className="my-10" />
@@ -553,9 +553,6 @@ export default function CourseDetailsPage() {
           <div className="group text-center mt-20 bg-[#f02d00] hover:bg-red-700 duration-300 font-bold border border-[#f02d00] text-white px-5 py-3 w-[22rem] mx-auto rounded-lg cursor-pointer">
             <Link
               to="/courses"
-              // onClick={() => {
-              //   window.scroll(0, 0);
-              // }}
               onClick={() => {
                 window.scroll({
                   top: 0,

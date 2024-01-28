@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const CoursesMegaMenu = () => {
   return (
@@ -10,70 +11,70 @@ export const CoursesMegaMenu = () => {
           <div className="text-2xl">
             <ul className="space-y-4">
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="/courses" className="hover:text-[#f02c00] duration-300">
                   All Courses
-                </a>{" "}
+                </Link>{" "}
                 <i className="fa-solid fa-arrow-right"></i>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Illustration
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Craft
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Marketing & Business
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Photography & Video
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Design
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   3D & Animation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Architechture & Spaces
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Writing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Fashion
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Web & App Desgin
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Calligraphy & TypoGraphy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Music & Audio
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -83,52 +84,52 @@ export const CoursesMegaMenu = () => {
           <div className="flex-grow">
             <ul className="font-extralight text-xl space-y-2">
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Course bundles
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Domestika Basics
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   New courses
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Top rated
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Popular courses
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   New Plus Courses
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Gift ideas
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Certifictes
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           {/* end featured courses  */}
           {/* show right image */}
-          <a href="/">
+          <Link onClick={() => window.scrollTo(0, 0)} to="/">
             <img className=" max-w-[450px]  overflow-hidden" src="https://i.ibb.co/5j6Wd7z/5692-original.jpg" alt="5692-original" border="0" />
-          </a>
+          </Link>
           {/* end show right image */}
         </div>
       </div>
@@ -147,24 +148,24 @@ export const MoreMegaMenu = () => {
           <div className="text-2xl">
             <ul className="space-y-4">
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Creatives
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Schools
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Domestica Live
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -173,25 +174,25 @@ export const MoreMegaMenu = () => {
           <div className="flex-grow ml-3">
             <ul className="font-extralight text-xl space-y-2">
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Help
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           {/* end help */}
           <div className="flex gap-10 max-w-[450px]">
             <div>
-              <a className="cursor-pointer" href="/">
+              <Link onClick={() => window.scrollTo(0, 0)} className="cursor-pointer" href="/">
                 <img className="w-[650px]" src="https://i.ibb.co/W3Snntk/12317-original.webp" alt="12317-original" border="0" />
-              </a>
+              </Link>
             </div>
             <div className="text-xl space-y-5">
               <div className="space-y-3">
                 <p className="text-sm font-bold">Latest blog post</p>
-                <a href="#" className="cursor-pointer hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="cursor-pointer hover:text-[#f02c00] duration-300">
                   Copyright in Artistic Creation: A Guide for Designers
-                </a>
+                </Link>
                 <div className="mt-3">
                   <p className="text-sm font-light">{blogDetails.length > 133 ? blogDetails.slice(0, 133) + "..." : blogDetails}</p>
                 </div>

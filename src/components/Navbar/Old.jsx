@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
   const [isCoursesOpen, setIsCoursesOpen] = useState(false);
@@ -35,44 +36,44 @@ export default function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
         <div className="flex flex-col px-6 text-2xl mt-12">
           <ul>
             <li onClick={() => setIsCoursesOpen(true)}>
-              <a href="#" className="text-white hover:text-[#f02c00] duration-300 mb-4">
+              <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-white hover:text-[#f02c00] duration-300 mb-4">
                 Courses <i className="fa-solid fa-arrow-right ml-3"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-[#f02c00] mb-4">
+              <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-white hover:text-[#f02c00] mb-4">
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-[#f02c00] mb-4">
+              <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-white hover:text-[#f02c00] mb-4">
                 Plus
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-[#f02c00] mb-4">
+              <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-white hover:text-[#f02c00] mb-4">
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-[#f02c00] mb-4">
+              <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-white hover:text-[#f02c00] mb-4">
                 Creatives
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-[#f02c00] mb-4">
+              <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-white hover:text-[#f02c00] mb-4">
                 Domestika Live
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="flex flex-col px-6 text-xl mt-8 space-y-4">
-          <a href="#" className="text-white hover:text-[#f02c00] border w-full border-[#f02c00] py-1 rounded-md bg-[#f02c00] text-center">
+          <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-white hover:text-[#f02c00] border w-full border-[#f02c00] py-1 rounded-md bg-[#f02c00] text-center">
             Join for Free
-          </a>
-          <a href="#" className="text-white hover:text-[#f02c00] border w-full border-gray-600 py-1 rounded-md transparent text-center">
+          </Link>
+          <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-white hover:text-[#f02c00] border w-full border-gray-600 py-1 rounded-md transparent text-center">
             Login
-          </a>
+          </Link>
         </div>
       </div>
       {/* show onclick course from right to left side */}
@@ -83,64 +84,64 @@ export default function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
           <div className="text-xl my-10">
             <ul className="space-y-2 text-white p-3">
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Illustration
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Craft
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Marketing & Business
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Photography & Video
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Design
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   3D & Animation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Architechture & Spaces
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Writing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Fashion
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Web & App Desgin
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Calligraphy & TypoGraphy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                   Music & Audio
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

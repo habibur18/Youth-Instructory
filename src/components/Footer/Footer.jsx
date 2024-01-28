@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const courseData = {
   CATEGORIES: ["Illustration courses", "Craft courses", "Marketing & Business courses", "Photography & Video courses", "Design courses", "3D & Animation courses", "Architecture & Spaces courses", "Writing courses", "Fashion courses", "Web & App Design courses", "Calligraphy & Typography courses", "Music & Audio courses"],
@@ -48,9 +49,9 @@ export default function Footer() {
                 <ul>
                   {courses.map((course) => (
                     <li key={course}>
-                      <a className="text-[#161616] text-sm" href="#">
+                      <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-[#161616] text-sm" href="#">
                         {course}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -72,12 +73,12 @@ export default function Footer() {
             <div className="my-6">
               <h4 className="text-xl font-bold">DOWNLOAD THE DOMESTIKA APP</h4>
               <div className="flex gap-4 my-3">
-                <a href="#">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#">
                   <img src="https://i.ibb.co/bJ9R7tL/appstore.png" alt="appstore" border="0" />
-                </a>
-                <a href="#">
+                </Link>
+                <Link onClick={() => window.scrollTo(0, 0)} to="#">
                   <img src="https://i.ibb.co/mSFDX1t/playstore.png" alt="playstore" border="0" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -94,9 +95,9 @@ export default function Footer() {
                 <ul className="flex gap-4 flex-wrap">
                   {value.map((val) => (
                     <li className={val.color && "text-[#f02c00]"} key={val.name}>
-                      <a className={` text-sm`} href="#">
+                      <Link onClick={() => window.scrollTo(0, 0)} to="#" className={` text-sm`} href="#">
                         {val.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -112,9 +113,9 @@ export default function Footer() {
                 {socialMediaData.socialConnect.networks.map((network, index) => (
                   <Fragment key={index}>
                     <li className="hover:text-[#f02c00] duration-300">
-                      <a href={network.link}>
+                      <Link onClick={() => window.scrollTo(0, 0)} to={network.link}>
                         <i className={network.icon}></i>
-                      </a>
+                      </Link>
                     </li>
                   </Fragment>
                 ))}
@@ -132,13 +133,19 @@ export default function Footer() {
             <ul className="flex gap-5">
               <li>&copy; Domestika 2024</li>
               <li className="underline hover:text-[#f02c00] duration-300">
-                <a href="#">Terms of Use</a>
+                <Link onClick={() => window.scrollTo(0, 0)} to="#">
+                  Terms of Use
+                </Link>
               </li>
               <li className="underline hover:text-[#f02c00] duration-300">
-                <a href="#">Privacy Policy</a>
+                <Link onClick={() => window.scrollTo(0, 0)} to="#">
+                  Privacy Policy
+                </Link>
               </li>
               <li className="underline hover:text-[#f02c00] duration-300">
-                <a href="#">Cookies Policy</a>
+                <Link onClick={() => window.scrollTo(0, 0)} to="#">
+                  Cookies Policy
+                </Link>
               </li>
             </ul>
           </div>

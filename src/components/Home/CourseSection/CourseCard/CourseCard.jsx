@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const courseInfo = [
   {
@@ -55,9 +56,9 @@ function CourseCard({ course, handleShowModal }) {
         </div>
         <div className="px-3 mt-3 space-y-4 py-5">
           <div className="space-y-2">
-            <a href="#" className="cursor-pointer text-xl font-semibold">
+            <Link to="/courseDetails" onClick={() => window.scrollTo(0, 0)} className="cursor-pointer text-xl font-semibold">
               {title}
-            </a>
+            </Link>
             <p className="text-sm font-medium">A course by {instructor}</p>
             <p className="text-[#848484]">{description}</p>
           </div>

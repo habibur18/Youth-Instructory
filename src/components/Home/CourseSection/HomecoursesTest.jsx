@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import CourseCard from "./CourseCard/CourseCard";
 import ModalDetailsPopup from "./ModalDetailsPopup";
 import Popup from "./Popup";
@@ -225,10 +226,10 @@ export default function HomecoursesTest() {
             <h3 className="text-3xl font-bold">Learn by doing</h3>
             <p className="text-xl text-[#848484] my-3">
               Get access to the best{" "}
-              <a href="#" className="text-[#848484] font-medium hover:text-[#f02c00] duration-300">
+              <Link onClick={() => window.scrollTo(0, 0)} to="#" className="text-[#848484] font-medium hover:text-[#f02c00] duration-300">
                 {" "}
                 online courses for creatives
-              </a>
+              </Link>
               . Interact with the top professionals and discover the creative world's best-kept secrets.
             </p>
           </div>

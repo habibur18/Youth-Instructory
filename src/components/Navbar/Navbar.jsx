@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { CoursesMegaMenu, MoreMegaMenu } from "./MegaMenu";
 import Sidebar from "./Sidebar";
 
@@ -96,40 +97,40 @@ export default function Navbar() {
               {/* menu bar */}
               {isMobile ? <i onClick={() => setIsSideBarOpen(!isSideBarOpen)} className="cursor-pointer fa-solid fa-bars text-xl"></i> : null}
               <div>
-                <a href="/" className="text-2xl cursor-pointer font-bold hover:text-[#f02c00] duration-300">
+                <Link onClick={() => window.scrollTo(0, 0)} to="/" className="text-2xl cursor-pointer font-bold hover:text-[#f02c00] duration-300">
                   Domestika
-                </a>
+                </Link>
               </div>
             </div>
             <div className={`flex gap-5 ${!isMobile ? "" : "flex-grow"}`}>
               {!isMobile ? (
                 <ul className="flex gap-4 items-center justify-between font-semibold">
                   <li className="hoverable duration-300 py-2">
-                    <a href="#" className="relative block hover:text-[#f02c00] ">
+                    <Link onClick={() => window.scrollTo(0, 0)} to="/courses" className="relative block hover:text-[#f02c00] ">
                       Courses
                       <span>
                         <i className="fa-regular fa-down"></i>
                       </span>
-                    </a>
+                    </Link>
                     <CoursesMegaMenu />
                   </li>
                   <Fragment>
                     {!inputClick ? (
                       <>
                         <li className="hoverable duration-300 py-2">
-                          <a href="#" className="hover:text-[#f02c00]  relative block">
+                          <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00]  relative block">
                             Projects
-                          </a>
+                          </Link>
                         </li>
                         <li className="hoverable duration-300 py-2">
-                          <a href="#" className="hover:text-[#f02c00]  relative block">
+                          <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00]  relative block">
                             Plus
-                          </a>
+                          </Link>
                         </li>
                         <li className="hoverable -mt-3 font-bold duration-300 py-4">
-                          <a className="relative block hover:text-[#f02c00]" href="#">
+                          <Link onClick={() => window.scrollTo(0, 0)} className="relative block hover:text-[#f02c00]" href="#">
                             ...
-                          </a>
+                          </Link>
                           <MoreMegaMenu />
                         </li>
                       </>
@@ -152,17 +153,17 @@ export default function Navbar() {
             )}
             <div>
               <div className="flex gap-4 items-center font-bold">
-                <a href="#" className="relative cursor-pointer">
+                <Link onClick={() => window.scrollTo(0, 0)} to="#" className="relative cursor-pointer">
                   <i className="fa-solid fa-cart-shopping text-xl hover:text-[#f02c00] cursor-pointer duration-300"></i>
                   <span className="absolute top-[-10px] px-2 right-[-14px]  font-light text-white bg-[#f02c00] rounded-full">0</span>
-                </a>
+                </Link>
                 <div className="flex items-center space-x-5">
-                  <a href="#" className="hover:text-[#f02c00] duration-300">
+                  <Link onClick={() => window.scrollTo(0, 0)} to="#" className="hover:text-[#f02c00] duration-300">
                     Log in
-                  </a>
-                  <a href="#" className="bg-[#f02c00] px-3 py-1 rounded-md hidden md:block">
+                  </Link>
+                  <Link onClick={() => window.scrollTo(0, 0)} to="#" className="bg-[#f02c00] px-3 py-1 rounded-md hidden md:block">
                     Join for Free
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

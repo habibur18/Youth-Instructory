@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const courseInfo = [
   {
@@ -60,7 +61,9 @@ export default function HomeCourses({ onHandleShowModal }) {
         <div className="px-3 mt-3 space-y-4">
           {/* course info  start*/}
           <div className="space-y-2">
-            <h3 className="text-xl font-semibold">Digital Fantasy Portraits with Photoshop</h3>
+            <Link to="/courseDetails" onClick={() => window.scrollTo(0, 0)} className="text-xl font-semibold">
+              Digital Fantasy Portraits with Photoshop
+            </Link>
             <div className="hidden sm:block">
               <p className="text-sm font-medium">A course by Karmen Loh (Bearbrickjia)</p>
               <p className="text-[#848484]">Learn how to create enchanting narratives in your digital portraits</p>
