@@ -1,12 +1,37 @@
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+
 const Popup = ({ open, children, closeModal }) => {
-  return (
-    <div onClick={() => closeModal()} className={`w-full mx-auto flex justify-center items-center min-h-[100vh] fixed top-0 left-0 right-0 bottom-0 z-50 bg-[#262a32] bg-opacity-50 `}>
-      <div onClick={() => closeModal()} className=" max-w-[900px] mx-auto">
-        <div onClick={(e) => e.stopPropagation()} className=" max-w-[900px] mx-auto">
-          {children}
-        </div>
+  const [shouldOverflow, setShouldOverflow] = useState(false);
+  const contentRef = useRef();
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      const contentHeight = contentRef.current.scrollHeight;
+      const windowHeight = window.innerHeight;
+
+      setShouldOverflow(contentHeight > windowHeight);
+    };
+
+    if (open) {
+      checkOverflow();
+      window.addEventListener("resize", checkOverflow);
+
+      return () => {
+        window.removeEventListener("resize", checkOverflow);
+      };
+    }
+  }, [open, children]);
+
+  const modalClassName = shouldOverflow ? "overflow-y-scroll" : "";
+
+  return createPortal(
+    <div className={`fixed inset-0 z-[999999999999] bg-[#262a32] bg-opacity-50 ${modalClassName}`}>
+      <div ref={contentRef}>
+        <div className="flex min-h-screen justify-center items-center">{children}</div>
       </div>
-    </div>
+    </div>,
+    document.getElementById("portal")
   );
 };
 

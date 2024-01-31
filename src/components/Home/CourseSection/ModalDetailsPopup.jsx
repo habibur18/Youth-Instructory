@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function ModalDetailsPopup({ selectedCourse, closeModal }) {
-  console.log();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640 ? true : false);
   const { name, author, shortDetails, sellerLevel, details, price, discount, courseDetails } = selectedCourse;
   const { courseImage, courseVideo } = courseDetails;
+  const ref = useRef(null);
 
   // Check if there is at least one details section
   const firstDetailsSection = details.length > 0 ? details[0] : "";
@@ -25,9 +25,23 @@ export default function ModalDetailsPopup({ selectedCourse, closeModal }) {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        closeModal();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref, closeModal]);
+
   return (
-    <div className={`bg-white p-7 rounded-md overflow-y-auto ${isMobile ? "h-screen sm:h-auto" : "h-full"}`}>
-      <div className="max-w-[700px] mx-auto modal-content">
+    <div ref={ref} className={`max-w-[750px] mx-auto bg-white p-7 rounded-md flex justify-center items-center`}>
+      <div className="">
         <div className="border relative">
           <iframe className="rounded-md w-full h-[300px] max-w-[400px] sm:max-w-[800px] sm:w-[600px] sm:h-96 md:w-[625px] lg:w-[700px] mx-auto" src={courseVideo}></iframe>
           <i
